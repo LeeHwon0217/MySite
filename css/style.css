@@ -109,7 +109,7 @@ button {
   border-bottom: 1px solid var(--color-accent);
 }
 
-.header__menu__item.active {
+.header__menu__item:active {
   border: 1px solid var(--color-accent);
   border-radius: 5px;
 }
@@ -161,6 +161,10 @@ button {
 }
 
 /* about */
+#about {
+  scroll-margin-top: 110.5px;
+}
+
 .majors {
   display: flex;
   justify-content: space-between;
@@ -223,6 +227,7 @@ button {
 
 /* skills */
 #skills {
+  scroll-margin-top: 110.5px;
   background-color: var(--color-primary-variant);
   color: var(--color-text);
 }
@@ -286,6 +291,7 @@ button {
 
 /* work */
 #work {
+  scroll-margin-top: 110.5px;
   background-color: var(--color-primary);
   color: var(--color-text);
 }
@@ -384,6 +390,10 @@ button {
 }
 
 /* license */
+#license {
+  scroll-margin-top: 110.5px;
+}
+
 .licenses {
   margin: 3rem;
 }
@@ -434,6 +444,8 @@ button {
 
 /* footer */
 #contact {
+  scroll-margin-top: 110.5px;
+  height: 1000px;
   background-color: var(--color-primary);
   color: var(--color-text);
 }
