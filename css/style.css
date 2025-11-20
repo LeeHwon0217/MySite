@@ -27,6 +27,11 @@
   box-sizing: border-box;
 }
 
+/* enable native smooth scrolling as a fallback */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "YoonChoWooSan";
   margin: 0;

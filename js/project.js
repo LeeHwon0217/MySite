@@ -31,3 +31,23 @@ function filterProjects(filter) {
     projectsContainer.classList.remove("anim-out");
   }, 300);
 }
+
+// Smooth scroll for header nav links
+const headerNav = document.querySelector(".header__nav");
+if (headerNav) {
+  headerNav.addEventListener("click", (e) => {
+    const target = e.target;
+    // handle clicks on <a href="#..."> inside nav
+    if (target && target.tagName === "A") {
+      const href = target.getAttribute("href");
+      if (href && href.startsWith("#")) {
+        e.preventDefault();
+        const id = href.slice(1);
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    }
+  });
+}
