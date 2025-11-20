@@ -32,22 +32,18 @@ function filterProjects(filter) {
   }, 300);
 }
 
-// Smooth scroll for header nav links
-const headerNav = document.querySelector(".header__nav");
-if (headerNav) {
-  headerNav.addEventListener("click", (e) => {
-    const target = e.target;
-    // handle clicks on <a href="#..."> inside nav
-    if (target && target.tagName === "A") {
-      const href = target.getAttribute("href");
-      if (href && href.startsWith("#")) {
+// Smooth scroll for all internal anchor links
+document.addEventListener("click", (e) => {
+  const target = e.target.closest("a");
+  if (target) {
+    const href = target.getAttribute("href");
+    if (href && href.startsWith("#")) {
+      const id = href.slice(1);
+      const section = document.getElementById(id);
+      if (section) {
         e.preventDefault();
-        const id = href.slice(1);
-        const section = document.getElementById(id);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
-  });
-}
+  }
+});

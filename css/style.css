@@ -119,6 +119,13 @@ button {
   border-radius: 5px;
 }
 
+.header__toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
 /* home */
 #home {
   background-color: var(--color-primary);
@@ -485,8 +492,26 @@ button {
   }
 
   .header {
-    flex-direction: column;
-    align-items: start;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header__toggle {
+    display: block;
+  }
+
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    width: 100%;
+  }
+
+  .header__nav.active {
+    display: block;
   }
 
   .header__menu {

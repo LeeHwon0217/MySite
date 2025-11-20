@@ -30,13 +30,16 @@ document.addEventListener("scroll", () => {
 });
 
 // Navbar 토글버튼 클릭 처리
-const navbarMenu = document.querySelector(".header__menu");
+const headerNav = document.querySelector(".header__nav");
 const navbarToggle = document.querySelector(".header__toggle");
 navbarToggle.addEventListener("click", () => {
-  navbarMenu.classList.toggle("open");
+  headerNav.classList.toggle("active");
 });
 
 // Navbar 메뉴 클릭시 메뉴를 자동으로 닫아줌
-navbarMenu.addEventListener("click", () => {
-  navbarMenu.classList.remove("open");
+headerNav.addEventListener("click", (e) => {
+  // 클릭한 요소가 링크일 때만 메뉴 닫기
+  if (e.target.tagName === "A") {
+    headerNav.classList.remove("active");
+  }
 });
