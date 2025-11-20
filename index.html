@@ -12,8 +12,8 @@
       src="https://kit.fontawesome.com/133260cff9.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/project.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/project.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -22,6 +22,12 @@
         <img class="header__logo__img" src="./images/bebe.ico" alt="logo" />
         <h1 class="header__logo__title"><a href="#">Hwon</a></h1>
       </div>
+
+      <!-- 여기 추가 -->
+      <button class="header__toggle" aria-label="메뉴 열기">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
       <nav class="header__nav">
         <ul class="header__menu">
           <li><a href="#home" class="header__menu__item">홈으로</a></li>
@@ -38,13 +44,15 @@
     <main>
       <!-- home -->
       <section id="home">
-        <img class="home__avatar" src="./images/bebe.jpg" alt="프로필 사진" />
-        <h2 class="home__title">
-          안녕하세요!! <br />
-          <strong class="home__title--strong">Hwon</strong>입니다
-        </h2>
-        <p class="home__description">서울에서 가장 뛰어난 AI 개발자입니다.</p>
-        <a class="home__contact" href="#contact">연락처</a>
+        <div class="home__container">
+          <img class="home__avatar" src="./images/bebe.jpg" alt="프로필 사진" />
+          <h2 class="home__title">
+            안녕하세요!! <br />
+            <strong class="home__title--strong">Hwon</strong>입니다
+          </h2>
+          <p class="home__description">서울에서 가장 뛰어난 AI 개발자입니다.</p>
+          <a class="home__contact" href="#contact">연락처</a>
+        </div>
       </section>
 
       <!-- about -->
@@ -187,28 +195,28 @@
           <p class="description">Projects</p>
           <ul class="categories">
             <li>
-              <button class="category category--selected">
+              <button class="category category--selected" data-category="all">
                 ALL<span class="category__count">10</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="front-end">
                 Front-end<span class="category__count">3</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="mobile">
                 Mobile<span class="category__count">5</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="back-end">
                 Back-end<span class="category__count">2</span>
               </button>
             </li>
           </ul>
           <ul class="projects">
-            <li class="project">
+            <li class="project" data-type="front-end">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
@@ -222,7 +230,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="front-end">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
@@ -236,7 +244,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="front-end">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
@@ -250,7 +258,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
@@ -264,7 +272,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
@@ -278,7 +286,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
@@ -292,7 +300,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
@@ -306,7 +314,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
@@ -320,7 +328,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="back-end">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
@@ -334,7 +342,7 @@
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="back-end">
               <a href="#" target="_blank"
                 ><!--새탭-->
                 <img
